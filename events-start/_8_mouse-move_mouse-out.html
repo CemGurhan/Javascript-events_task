@@ -2,22 +2,7 @@
 <html>
 
 <head>
-    <script>
-        function displayCoordinates(event) {
-            /*
-                TODO implement the function:
-                - get x, get y
-                - diplay the values in coorvalues paragraph
-            */
-        }
-
-        function clearCoor() {
-            /*
-                TODO implement the function:
-                - clear coorvalues paragraph
-            */
-        }
-    </script>
+    
 </head>
 
 <body>
@@ -28,7 +13,30 @@
     <p>Mouse over the rectangle above, to display the coordinates of your mouse pointer.</p>
 
     <p id="coorvalues"></p>
+    
 
 </body>
+
+<script>
+    function displayCoordinates(event) {
+        /*
+            TODO implement the function:
+            - get x, get y
+            - diplay the values in coorvalues paragraph
+        */
+
+        const coord = document.querySelector("#coorvalues");
+        coord.innerText = 'Coordinates: ["' + event.pageX + '", "' + event.pageY + '"]';
+        
+        console.log('Coordinates: ["' + event.pageX + '", "' + event.pageY + '"]');
+    }
+
+    function clearCoor() {
+        /*
+            TODO implement the function:
+            - clear coorvalues paragraph
+        */
+    }
+</script>
 
 </html>
