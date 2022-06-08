@@ -9,7 +9,7 @@
 
 <body>
 
-    <div style="background-color:royalblue; width:450px;height:200px;"></div>
+    <div style="background-color:royalblue; width:450px;height:200px;" onmousemove="showCoord()" id = "blueSquare"></div>
 
     <p>
         Click the above div, to display the x and y coordinates of the cursor.
@@ -18,6 +18,22 @@
     <p id="msg" style="font-size:5em;"></p>
 
 </body>
+
+
+<script>
+
+    function showCoord(){
+
+        document.querySelector("#blueSquare").addEventListener("click",(event)=>{
+
+            document.querySelector("#msg").innerText = 'X = "' + event.pageX + '" Y = "' + event.pageY + '"';
+
+        })
+
+    }
+
+
+</script>
 
 </html>
 
