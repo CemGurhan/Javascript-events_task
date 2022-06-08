@@ -4,12 +4,22 @@
 <head>
     <script>
         function resizedImage(el) {
+
+            const image = document.querySelector("img");
+
+            image.style.width = "150px";
+            image.style.height = "40px";
             /* 
                 TODO change width and size of the element
             */
         }
 
         function defaultImage(el) {
+
+            const image = document.querySelector("img");
+
+            image.style.width = "300px";
+            image.style.height = "80px";
             /* 
                 TODO change width and size of the element
             */
@@ -24,7 +34,7 @@
             - onmouseover: call resizedImage(el) function
             - onmouseout: call defaultImage(this) function 
      -->
-    <img onmouseover="resizedImage(this)" onmouseout="defaultImage(this)" src="./images/bright-logo.png" alt="Bright" width="300"
+    <img class="img" onmouseover="resizedImage(this)" onmouseout="defaultImage(this)" src="./images/bright-logo.png" alt="Bright" width="300"
         height="80">
 
     <p>resizedImage() is triggered when the user moves the mouse pointer over the logo.</p>
