@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html onclick = "displayKeyCode()">
 
 <head>
     <script>
@@ -15,6 +15,30 @@
     <p id="msg" style="font-size:20em;"></p>
 
 </body>
+
+<script>
+
+    function displayKeyCode(){
+
+        
+
+        document.addEventListener("click",()=>{
+
+            document.addEventListener("keydown",(event)=>{
+
+
+                document.querySelector("#msg").innerText = event.keyCode;
+                console.log(event.keyCode);
+
+            })
+            
+        })
+
+    }
+
+
+
+</script>
 
 </html>
 
